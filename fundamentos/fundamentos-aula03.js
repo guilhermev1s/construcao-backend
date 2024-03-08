@@ -6,7 +6,6 @@
  de informação
 */
 
-
 // Impressão de informação no terminal
 console.log('Testando impressão de informação no terminal')
 console.error("testando console erro")
@@ -129,8 +128,6 @@ console.log(texto.toLocaleLowerCase())
 let valor = "10,50"
 console.log(valor)
 
-valor  = valor.replace(",", ".")
-console.log(valor)
 
 //tratamento de dados (number)
 let numero = 10.77777
