@@ -11,7 +11,7 @@ const nota3 = Number(prompt('nota  3: '))
 const nota4 = Number(prompt('nota  4: '))
 
 let media = (nota1 + nota2 + nota3 + nota4) / 4
-console.log('Media:', media)
+console.log('Media:' + media)
 
 if(media >= 7){
     console.log('APROVADO')
