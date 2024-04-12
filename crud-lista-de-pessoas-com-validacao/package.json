@@ -1,5 +1,5 @@
 {
-  "name": "crud-lista-de-pessoas",
+  "name": "crud-lista-de-pessoas-com-validacao",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
