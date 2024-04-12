@@ -59,7 +59,6 @@ router.put('/produtos/:id', (req, res) => {
     if (!novosDados.nome || !novosDados.preco) {
         res.status(400).json({ mensagem: "Nome e preço são obrigatórios!" })
     } else {
-
         const index = listaProdutos.findIndex(produto => produto.id == id)
         if (index == -1) {
             res.status(404).json({ mensagem: "Produto não encotrado!" })
