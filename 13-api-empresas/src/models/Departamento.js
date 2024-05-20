@@ -9,10 +9,6 @@ const schema = new mongoose.Schema(
         descricao: {
             type: String,
             required: false
-        },
-        salario: {
-            type: Number,
-            required: true
         }
     },
     {
@@ -20,6 +16,6 @@ const schema = new mongoose.Schema(
     }
 )
 
-const Cargo = mongoose.model('cargo', schema)
+const Departamento = mongoose.model('departamento', schema)
 
-module.exports = Cargo
+module.exports = Departamento

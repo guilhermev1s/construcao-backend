@@ -6,20 +6,19 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        descricao: {
+        email: {
             type: String,
+            required: true,
+        },
+        senha: {
+            type: mongoose.SchemaTypes.ObjectId,
+            ref: 'cargo',
             required: false
         },
-        salario: {
-            type: Number,
-            required: true
-        }
-    },
-    {
         timestamps: true
     }
 )
 
-const Cargo = mongoose.model('cargo', schema)
+const Usuario = mongoose.model('usuario', schema)
 
-module.exports = Cargo
+module.exports = Usuario
