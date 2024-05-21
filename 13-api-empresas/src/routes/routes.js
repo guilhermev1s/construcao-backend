@@ -33,5 +33,20 @@ router.get('/funcionarios/:id', validarId, FuncionarioController.getById)
 router.put('/funcionarios/:id', validarId, funcionarioValidador, FuncionarioController.update)
 router.delete('/funcionarios/:id', validarId, FuncionarioController.remove)
 
+// Projetos
+router.post('/projetos', projetoValidador, ProjetoController.create)
+router.get('/projetos', ProjetoController.getAll)
+router.get('/projetos/:id', validarId, ProjetoController.getById)
+router.put('/projetos/:id', validarId, projetoValidador, ProjetoController.update)
+router.delete('/projetos/:id', validarId, ProjetoController.remove)
+
+// Tarefas
+router.post('/tarefas', tarefaValidador, TarefaController.create)
+router.get('/tarefas', TarefaController.getAll)
+router.get('/tarefas/:id', validarId, TarefaController.getById)
+router.put('/tarefas/:id', validarId, tarefaValidador, TarefaController.update)
+router.delete('/tarefas/:id', validarId, TarefaController.remove)
+
+
 
 module.exports = router
