@@ -5,12 +5,16 @@ const router = express.Router()
 const CargoController = require('../controllers/CargoController')
 const DepartamentoController = require('../controllers/DepartamentoController')
 const FuncionarioController = require('../controllers/FuncionarioController')
+const ProjetoController = require('../controllers/ProjetoController')
+const TarefaController = require('../controllers/TarefaController')
 
 // validators
 const { validarId } = require('../validators/IdValidator')
 const { cargoValidador } = require('../validators/CargoValidator')
 const { departamentoValidador } = require('../validators/DepartamentoValidator')
 const { funcionarioValidador } = require('../validators/FuncionarioValidator')
+const { projetoValidador } = require('../validators/ProjetoValidator')
+const { tarefaValidador } = require('../validators/TarefaValidator')
 
 // Cargos
 router.post('/cargos', cargoValidador, CargoController.create)
@@ -46,7 +50,6 @@ router.get('/tarefas', TarefaController.getAll)
 router.get('/tarefas/:id', validarId, TarefaController.getById)
 router.put('/tarefas/:id', validarId, tarefaValidador, TarefaController.update)
 router.delete('/tarefas/:id', validarId, TarefaController.remove)
-
 
 
 module.exports = router

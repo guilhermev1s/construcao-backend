@@ -8,13 +8,14 @@ const schema = new mongoose.Schema(
         },
         email: {
             type: String,
-            required: true,
+            required: true
         },
         senha: {
-            type: mongoose.SchemaTypes.ObjectId,
-            ref: 'cargo',
-            required: false
-        },
+            type: String,
+            required: true
+        }
+    },
+    {
         timestamps: true
     }
 )
